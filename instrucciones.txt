@@ -1,0 +1,43 @@
+Taking Note App
+---------------
+
+
+- Instrucciones
+
+
+1 - Descomprimir el archivo {nombre del archivo}
+Ingresar en la carpeta note-taking-app/ y correr en consola
+npm install
+
+
+2.1 - Levantar una instancia de React (Opcion 1 - Dev)
+Ingresar en la carpeta note-taking-app/ y correr en consola
+npm start
+
+
+2.2 - Levantar una instancia de React (Opcion 2 - Prod)
+Instalar Live Server de manera global (https://www.npmjs.com/package/live-server)
+npm install -g live-server
+
+Ingresar en la carpeta note-taking-app/build y correr el siguiente comando
+live-server
+
+Se debería ver la aplicación en http://127.0.0.1:8080/
+
+2.3 - Hosting Online
+Ingrar en la url http://increase.mrjouts.com/
+Debe estar corriendo el servidor local para poder real<iar con exito las peticiones (paso 3)
+
+
+3 - Levantar el servidor API REST
+Instalar JSON Server (https://www.npmjs.com/package/json-server)
+npm install -g json-server
+
+Ingresar en la carpeta note-taking-app/api y correr el siguiente comando
+json-server --watch db.json --port 3001
+
+Notar que el puerto por default es 3000 y lo cambiamos por 3001.
+
+En caso de que no se pueda correr el servidor en el puesto 3001 se debe cambiar la llamada a la API en ./src/constants/conection.js
+
+Listo, con todas estas configuraciones la aplicación debería funcionar correctamente.

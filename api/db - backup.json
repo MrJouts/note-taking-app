@@ -1,0 +1,47 @@
+{
+  "notes": [
+    {
+      "title": "Use it everywhere",
+      "content": "Your notes stay updated across all your devices. No buttons to press. It just works.",
+      "color": "success",
+      "id": "OeuyrJi"
+    },
+    {
+      "title": "You made a mistake",
+      "content": "Don't worry, you can go back and edit your notes any time.",
+      "color": "warning",
+      "id": "Vqzu7Gp"
+    },
+    {
+      "title": "Stay organized",
+      "content": "Group your notes by color.",
+      "color": "success",
+      "id": "qbiMWJ4"
+    },
+    {
+      "title": "Try adding a new note",
+      "content": "To add a new note press the plus icon button.",
+      "color": "info",
+      "id": "-LwY0Ak"
+    },
+    {
+      "title": "Job done",
+      "content": "Keep your board clean, you can easily delete your note pressing the trash icon.",
+      "color": "danger",
+      "id": "FlpbxGK"
+    },
+    {
+      "title": "Adapts to your writing",
+      "content": "This app is great for quick ideas and works very well when you're writing longer documents.",
+      "color": "dark",
+      "id": "r_0ZKB9"
+    }
+  ],
+  "colors": [
+    "dark",
+    "info",
+    "success",
+    "warning",
+    "danger"
+  ]
+}

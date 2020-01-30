@@ -1,13 +1,241 @@
-body {
+/* ------------------------ Fonts */
+
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Roboto&display=swap");
+
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  font-family: "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f2f2f2;
+}
+
+button,
+textarea {
+  font-family: "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ------------------------ Header */
+
+header {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+/* ------------------------ Content */
+
+.container {
+  margin: 1.5rem 10px;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    margin: 2rem 1rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    width: 960px;
+    margin: 2rem auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1140px;
+    margin: 2rem auto;
+  }
+}
+
+.wrapper-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.wrapper-title > *:first-of-type {
+  margin-right: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .flex {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .flex {
+    flex-direction: row;
+  }
+
+  .col-1 {
+    min-width: 30vw;
+  }
+
+  .col-2 {
+    border-left: 2px dashed #707070;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    min-width: 60vw;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .col-1 {
+    min-width: 25vw;
+  }
+
+  .col-2 {
+    min-width: 60vw;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .col-1 {
+    min-width: 20vw;
+  }
+
+  .col-2 {
+    min-width: 50vw;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .col-2 {
+    min-width: 35vw;
+  }
+}
+
+/* ------------------------ Form */
+
+.form-control {
+  margin-bottom: 1rem;
+}
+
+.form-control .hide {
+  display: none;
+}
+
+.form-control .show {
+  display: block;
+}
+
+.form-radio {
+  margin-bottom: 1.25rem;
+  display: flex;
+}
+
+.form-radio label {
+  font-size: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: border 200ms ease-in-out;
+}
+
+.form-radio label.active {
+  border: 5px solid #31303a;
+}
+
+.form-radio label.dark.active {
+  border: 5px solid #6e6e71;
+}
+
+.form-radio label:not(:last-of-type) {
+  margin-right: 0.75rem;
+}
+
+.form-radio label.info {
+  background-color: #4bb1cf;
+}
+
+.form-radio label.warning {
+  background-color: #ede04d;
+}
+
+.form-radio label.danger {
+  background-color: #ed4f32;
+}
+
+.form-radio label.success {
+  background-color: #15cd72;
+}
+
+.form-radio label.dark {
+  background-color: #31303a;
+}
+
+input[type="radio"] {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+
+/* ------------------------ Empty Notes */
+
+.empty-notes {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center
+}
+
+.empty-notes h3 {
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  color: #31303a;
+  margin-bottom: 2rem;
+}
+
+.empty-notes p {
+  margin-bottom: 2rem;
+}
+
+
+@media screen and (max-width: 768px) {
+  .empty-notes h3 {
+    font-size: 1.5rem;
+  }
+
+  .empty-notes p {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+}
+
+/* ------------------------ Masonry */
+
+.my-masonry-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -1rem; /* gutter size offset */
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 1rem; /* gutter size */
+  background-clip: padding-box;
 }
